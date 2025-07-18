@@ -24,7 +24,7 @@ static void led_check_work_fn(struct work_struct *work)
     {
         if (test_bit(LED_CAPSL, input_dev_handle->ledbit))
         {
-            bool is_capslock_on = test_bit(LED_CAPSL, input_dev_handle->led);
+            is_capslock_on = test_bit(LED_CAPSL, input_dev_handle->led);
             printk(KERN_DEBUG "(%s): Caps Lock LED state: %s\n", input_dev_handle->name, is_capslock_on ? "ON" : "OFF");
         }
         else
